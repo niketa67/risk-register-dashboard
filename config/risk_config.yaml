@@ -1,0 +1,67 @@
+likelihood_scale:
+  1: {label: Rare, description: "Less than 5% chance in 12 months; exceptional circumstances only"}
+  2: {label: Unlikely, description: "5-20% chance in 12 months; could occur but not expected"}
+  3: {label: Possible, description: "20-50% chance in 12 months; might occur at some point"}
+  4: {label: Likely, description: "50-80% chance in 12 months; will probably occur"}
+  5: {label: Almost Certain, description: "Over 80% chance in 12 months; expected to occur"}
+
+impact_scale:
+  1:
+    label: Insignificant
+    financial: "Loss under 10k"
+    operational: "No noticeable disruption"
+    regulatory: "No regulatory interest"
+    reputational: "No external awareness"
+  2:
+    label: Minor
+    financial: "Loss of 10k-100k"
+    operational: "Brief disruption of a non-critical service"
+    regulatory: "Minor internal policy breach"
+    reputational: "Limited local or customer complaints"
+  3:
+    label: Moderate
+    financial: "Loss of 100k-1M"
+    operational: "Disruption of a service for up to a day"
+    regulatory: "Reportable breach; regulator enquiry"
+    reputational: "Negative coverage in trade media"
+  4:
+    label: Major
+    financial: "Loss of 1M-10M"
+    operational: "Multi-day outage of a critical service"
+    regulatory: "Formal investigation; significant fine"
+    reputational: "National negative media coverage"
+  5:
+    label: Severe
+    financial: "Loss over 10M"
+    operational: "Prolonged loss of critical business capability"
+    regulatory: "Loss of licence or enforcement action"
+    reputational: "Sustained loss of public trust"
+
+rating_bands:
+  - {name: Low, min: 1, max: 4, color: "#2e9e4f"}
+  - {name: Medium, min: 5, max: 9, color: "#f2c230"}
+  - {name: High, min: 10, max: 15, color: "#f08a24"}
+  - {name: Critical, min: 16, max: 25, color: "#d62f2f"}
+
+risk_appetite:
+  max_residual_score: 9
+  category_overrides:
+    Cyber Security: 6
+    Data Privacy: 6
+    Regulatory / Compliance: 4
+
+categories:
+  - Cyber Security
+  - Technology / IT Operations
+  - Third Party / Vendor
+  - Regulatory / Compliance
+  - Operational
+  - Financial
+  - Data Privacy
+  - Business Continuity
+
+treatment_options: [Mitigate, Accept, Transfer, Avoid]
+
+status_values: [Identified, Assessed, In Treatment, Monitoring, Closed]
+
+action_status_values: [Not Started, In Progress, Completed, Overdue]
